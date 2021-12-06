@@ -52,7 +52,7 @@ No changelog yet.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/thcheetah777/janras/blob/master/LICENSE) file for full details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/thcheetah777/janras/blob/master/LICENSE) file for full details
 
 ## Acknowledgments
 
