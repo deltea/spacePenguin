@@ -37,8 +37,8 @@ const config = {
 
   // Scenes
   scene: {
-    preload,
-    create,
-    update
+    // preload,
+    // create,
+    // update
   }
 };
