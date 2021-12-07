@@ -1,4 +1,4 @@
-# :earth_americas: Space Penguin
+# :penguin: Space Penguin
 
 **Live Demo:** [thcheetah777.github.io/spacePenguin/](https://thcheetah777.github.io/spacePenguin/)
 
