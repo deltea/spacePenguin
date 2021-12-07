@@ -1,9 +1,9 @@
 # Contributing
 ## Questions
-Please ask questions in the [discussions tab](https://github.com/thcheetah777/janras/discussions). Label the discussion Q&A. If you have a bug or feature request, put it in an issue.
+Please ask questions in the [discussions tab](https://github.com/thcheetah777/spacePenguin/discussions). Label the discussion Q&A. If you have a bug or feature request, put it in an issue.
 
 ## Feedback
-I have made a [feedback discussion](https://github.com/thcheetah777/janras/discussions/1) for feedback.
+I have made a [feedback discussion](https://github.com/thcheetah777/spacePenguin/discussions/1) for feedback.
 
 ## Debug Mode
 To enter debug mode, change ```config.js``` from
