@@ -1,6 +1,6 @@
-# :earth_americas: Janras
+# :earth_americas: Space Penguin
 
-**Live Demo:** [thcheetah777.github.io/janras/](https://thcheetah777.github.io/janras/)
+**Live Demo:** [thcheetah777.github.io/spacePenguin/](https://thcheetah777.github.io/spacePenguin/)
 
 ## Description
 
@@ -14,7 +14,7 @@ Do you like platformer games? How about space shooters? Maybe action-adventure g
 * Copy and enter this into the prompt
 
 ```
-git clone https://github.com/thcheetah777/janras/
+git clone https://github.com/thcheetah777/spacePenguin/
 ```
 
 * Wait for it to unpack
@@ -44,7 +44,7 @@ No preview yet.
 
 ## Contribution
 
-Read [CONTRIBUTING.md](https://github.com/thcheetah777/janras/blob/master/CONTRIBUTING.md) for more info
+Read [CONTRIBUTING.md](https://github.com/thcheetah777/spacePenguin/blob/master/CONTRIBUTING.md) for more info
 
 ## Version History
 
@@ -52,9 +52,9 @@ No changelog yet.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/thcheetah777/janras/blob/master/LICENSE) file for full details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/thcheetah777/spacePenguin/blob/master/LICENSE) file for full details
 
 ## Acknowledgments
 
-* **Inspiration**: A submission in Github Game Off 
+* **Inspiration**: A submission in Github Game Off 2019
 * **Graphics**: Me on [pixilart.com](https://www.pixilart.com/)
