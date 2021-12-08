@@ -1,4 +1,4 @@
-# :penguin: Space Penguin
+# 🌎 🐧 Space Penguin
 
 **Live Demo:** [thcheetah777.github.io/spacePenguin/](https://thcheetah777.github.io/spacePenguin/)
 
