@@ -2,7 +2,9 @@
 // Game obj
 let game = {
   sfx: {},
-  stats: {}
+  stats: {},
+  width: 2000,
+  height: 1000
 };
 
 // Phaser game
