@@ -12,6 +12,7 @@ SpaceScene.prototype.create = function() {
 
   // Spaceship
   game.spaceship = this.physics.add.sprite(500, 500, "spaceshipNormal").setGravityY(-config.physics.arcade.gravity.y).setScale(8).setDrag(30);
+  game.spaceship.body.setMaxSpeed(500);
 
   // Camera
   this.cameras.main.setBounds(0, 0, game.width, game.height);
