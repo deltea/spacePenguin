@@ -15,7 +15,7 @@ const config = {
   },
 
   // Space
-  backgroundColor: 0x00000,
+  backgroundColor: 0x000000,
 
   // Physics
   physics: {
@@ -36,9 +36,5 @@ const config = {
   },
 
   // Scenes
-  scene: {
-    // preload,
-    // create,
-    // update
-  }
+  scene: [SpaceScene]
 };
