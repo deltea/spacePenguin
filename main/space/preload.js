@@ -7,4 +7,5 @@ SpaceScene.prototype.preload = function() {
   this.load.image("spaceTile3", "main/space/assets/spaceTile3.png");
   this.load.image("spaceTile4", "main/space/assets/spaceTile4.png");
   this.load.image("spaceTile5", "main/space/assets/spaceTile5.png");
+  this.load.image("spaceshipNormal", "main/space/assets/spaceshipNormal.png");
 };

@@ -6,4 +6,7 @@ SpaceScene.prototype.create = function() {
       this.add.image(x * 8 * 8, y * 8 * 8, `spaceTile${Math.round(Math.random() * 5)}`).setScale(8);
     }
   }
+
+  // Spaceship
+  game.spaceship = this.physics.add.sprite(500, 500, "spaceshipNormal").setGravityY(-config.physics.arcade.gravity.y).setScale(8);
 };
