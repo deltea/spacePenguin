@@ -13,4 +13,7 @@ SpaceScene.prototype.update = function() {
   } else {
     game.spaceship.body.setAngularVelocity(0);
   }
+
+  // World wrap
+  this.physics.world.wrap(game.spaceship);
 };
