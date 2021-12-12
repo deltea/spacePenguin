@@ -4,9 +4,10 @@ SpaceScene.prototype.create = function() {
   game.cursors = this.input.keyboard.createCursorKeys();
 
   // Background: Space Tiles
-  for (var x = 0; x < 110; x++) {
-    for (var y = 0; y < 11; y++) {
-      this.add.image(x * 8 * 8, y * 8 * 8, `spaceTile${Math.round(Math.random() * 5)}`).setScale(8);
+  for (var x = 0; x < game.width; x += 8 * 4) {
+    for (var y = 0; y < game.height; y += 8 * 4) {
+      this.add.image(x * 8, y * 8, `spaceTile${Math.round(Math.random() * 5)}`).setScale(8);
+      console.log("Leo");
     }
   }
 
