@@ -16,7 +16,8 @@ SpaceScene.prototype.update = function() {
 
   // Shooting
   if (game.cursors.space.isDown) {
-    
+    let bullet = game.spaceship.bullets.create(game.spaceship.x, game.spaceship.y, "bullet").setScale(8);
+    bullet.setGravityY(-config.physics.arcade.gravity.y);
   }
 
   // World wrap
