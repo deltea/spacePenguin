@@ -14,6 +14,11 @@ SpaceScene.prototype.update = function() {
     game.spaceship.body.setAngularVelocity(0);
   }
 
+  // Shooting
+  if (game.cursors.space.isDown) {
+    
+  }
+
   // World wrap
   this.physics.world.wrap(game.spaceship);
 
