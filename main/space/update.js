@@ -16,4 +16,15 @@ SpaceScene.prototype.update = function() {
 
   // World wrap
   this.physics.world.wrap(game.spaceship);
+
+  // Add ship upgrades
+  if (game.mode === "normal") {
+    game.spaceship.setTexture("spaceshipNormal");
+  } else if (game.mode === "cannon") {
+    game.spaceship.setTexture("spaceshipCannon");
+  } else if (game.mode === "double") {
+    game.spaceship.setTexture("spaceshipDouble");
+  } else {
+    game.spaceship.setTexture("spaceshipBoth");
+  }
 };
