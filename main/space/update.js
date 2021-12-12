@@ -2,7 +2,7 @@
 SpaceScene.prototype.update = function() {
   // Controls
   if (game.cursors.up.isDown) {
-    this.physics.velocityFromRotation(game.spaceship.rotation - 1.5, 200, game.spaceship.body.acceleration);
+    this.physics.velocityFromRotation(game.spaceship.rotation - 1.5708, 200, game.spaceship.body.acceleration);
   } else {
     game.spaceship.setAcceleration(0);
   }
