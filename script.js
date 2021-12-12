@@ -3,8 +3,8 @@
 let game = {
   sfx: {},
   stats: {},
-  width: 2000,
-  height: 1000
+  width: 20000,
+  height: 10000
 };
 
 // Phaser game
