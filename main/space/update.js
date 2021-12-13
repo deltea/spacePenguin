@@ -15,9 +15,11 @@ SpaceScene.prototype.update = function() {
   }
 
   // Shooting
-  if (game.cursors.space.isDown) {
-    let bullet = game.spaceship.bullets.create(game.spaceship.x, game.spaceship.y, "bullet").setScale(8);
+  const spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+  if (Phaser.Input.Keyboard.JustDown(spacebar)) {
+    let bullet = game.spaceship.bullets.create(game.spaceship.x - 4, game.spaceship.y, "bullet").setScale(8);
     bullet.setGravityY(-config.physics.arcade.gravity.y);
+    this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
   }
 
   // World wrap
