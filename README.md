@@ -1,10 +1,10 @@
-# 🌎 🐧 Space Penguin (in development)
+# 🌎 🐧 🥚 Space Penguin (in development)
 
 **Live Demo:** [thcheetah777.github.io/spacePenguin/](https://thcheetah777.github.io/spacePenguin/)
 
 ## Description
 
-Do you like platformer games? How about space shooters? Maybe action-adventure games? Well, this game has the best of all worlds!
+One penguin, five eggs.
 
 ## Getting Started
 
