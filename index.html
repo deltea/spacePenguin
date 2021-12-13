@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Space Penguin</title>
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png">
+
+    <script type="text/javascript">
+      // Scroll to bottom of page
+      window.onload = function() {
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
   </head>
-  <body>
+  <body style="overflow: hidden;" id="main">
     <!-- Phaser -->
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
 
