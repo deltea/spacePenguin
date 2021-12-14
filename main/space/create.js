@@ -12,4 +12,7 @@ SpaceScene.prototype.create = function() {
   this.cameras.main.setBounds(0, 0, game.width, game.height);
   this.physics.world.setBounds(0, 0, game.width, game.height);
   this.cameras.main.startFollow(game.spaceship, true, 0.1, 0.1);
+
+  // Create a group of asteroids
+  game.asteroids = this.physics.add.group();
 };
