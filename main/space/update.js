@@ -46,9 +46,10 @@ SpaceScene.prototype.update = function() {
       this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
     }
   }
-  
-  // World wrap
+
+  // World wraps
   this.physics.world.wrap(game.spaceship);
+  this.physics.world.wrap(game.asteroids);
 
   // Add ship upgrades
   if (game.mode === "normal") {
