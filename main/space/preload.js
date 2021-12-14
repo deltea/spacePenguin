@@ -7,4 +7,5 @@ SpaceScene.prototype.preload = function() {
   this.load.image("spaceshipBoth", "main/space/assets/spaceshipBoth.png");
   this.load.image("bullet", "main/space/assets/bullet.png");
   this.load.image("cannonBullet", "main/space/assets/cannonBullet.png");
+  this.load.image("asteroid", "main/space/assets/asteroid.png");
 };
