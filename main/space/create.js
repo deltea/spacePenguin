@@ -22,4 +22,10 @@ SpaceScene.prototype.create = function() {
     asteroid.setVelocityX(Math.random() * 800);
     asteroid.setVelocityY(Math.random() * 800);
   }
+
+  // Colliders
+  this.physics.add.collider(game.spaceship.bullets, game.asteroids, function(bullet, asteroid) {
+    bullet.destroy();
+    asteroid.destroy();
+  });
 };
