@@ -32,4 +32,5 @@ SpaceScene.prototype.create = function() {
       asteroid.destroy();
     }
   });
+  this.physics.add.collider(game.spaceship, game.asteroids);
 };
