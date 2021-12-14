@@ -13,6 +13,13 @@ SpaceScene.prototype.create = function() {
   this.physics.world.setBounds(0, 0, game.width, game.height);
   this.cameras.main.startFollow(game.spaceship, true, 0.1, 0.1);
 
-  // Create a group of asteroids
+  // Create asteroids
   game.asteroids = this.physics.add.group();
+  for (var i = 0; i < 10; i++) {
+    let asteroid = game.asteroids.create(game.spaceship.x, game.spaceship.y, "asteroid");
+    asteroid.setScale(8);
+    asteroid.setGravityY(-config.physics.arcade.gravity.y);
+    asteroid.setVelocityX(Math.random() * 800);
+    asteroid.setVelocityY(Math.random() * 800);
+  }
 };
