@@ -21,11 +21,15 @@ SpaceScene.prototype.create = function() {
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
     asteroid.setVelocityX(Math.random() * 800);
     asteroid.setVelocityY(Math.random() * 800);
+    asteroid.health = 3;
   }
 
   // Colliders
   this.physics.add.collider(game.spaceship.bullets, game.asteroids, function(bullet, asteroid) {
     bullet.destroy();
-    asteroid.destroy();
+    asteroid.health--;
+    if (asteroid.health < 1) {
+      asteroid.destroy();
+    }
   });
 };
