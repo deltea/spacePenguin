@@ -37,18 +37,12 @@ SpaceScene.prototype.update = function() {
       texture = "cannonBullet";
       x = game.space.spaceship.x - 4;
     }
-    let bullet = game.space.spaceship.bullets.create(x, game.space.spaceship.y, texture).setScale(8);
-    bullet.setGravityY(-config.physics.arcade.gravity.y);
-    this.physics.velocityFromAngle(game.space.spaceship.angle - 90, 1000, bullet.body.velocity);
+    game.space.addBullet(this, x, game.space.spaceship.y, texture);
     if (game.space.mode === "double" || game.space.mode === "both") {
-      let bullet = game.space.spaceship.bullets.create(game.space.spaceship.x + 30, game.space.spaceship.y, "bullet").setScale(8);
-      bullet.setGravityY(-config.physics.arcade.gravity.y);
-      this.physics.velocityFromAngle(game.space.spaceship.angle - 90, 1000, bullet.body.velocity);
+      game.space.addBullet(this, game.space.spaceship.x + 30, game.spaceship.y, "bullet");
     }
     if (game.space.mode === "both") {
-      let bullet = game.space.spaceship.bullets.create(game.space.spaceship.x - 35, game.space.spaceship.y, "bullet").setScale(8);
-      bullet.setGravityY(-config.physics.arcade.gravity.y);
-      this.physics.velocityFromAngle(game.space.spaceship.angle - 90, 1000, bullet.body.velocity);
+      game.space.addBullet(this, game.space.spaceship.x - 35, game.spaceship.y, "bullet");
     }
   }
 
