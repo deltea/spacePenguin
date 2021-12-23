@@ -24,7 +24,7 @@ SpaceScene.prototype.create = function() {
 
   // Create asteroids
   game.asteroids = this.physics.add.group();
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 100; i++) {
     let asteroid = game.asteroids.create(Math.random() * game.width, Math.random() * game.height, "asteroid");
     asteroid.setScale(8);
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
@@ -35,9 +35,11 @@ SpaceScene.prototype.create = function() {
 
   // Colliders
   this.physics.add.collider(game.spaceship.bullets, game.asteroids, function(bullet, asteroid) {
+    game.sfx.explosion.play();
     bullet.destroy();
     asteroid.health--;
     if (asteroid.health < 1) {
+      game.sfx.bigExplosion.play();
       asteroid.destroy();
     }
   });
