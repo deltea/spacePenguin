@@ -8,6 +8,7 @@ SpaceScene.prototype.preload = function() {
   this.load.image("bullet", "main/space/assets/bullet.png");
   this.load.image("cannonBullet", "main/space/assets/cannonBullet.png");
   this.load.image("asteroid", "main/space/assets/asteroid.png");
+  this.load.image("spaceTile", "main/space/assets/spaceTile.png");
 
   // Load sounds
   this.load.audio("normalLaser", "main/space/assets/sfx/normalLaser.wav");
