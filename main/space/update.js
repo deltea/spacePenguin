@@ -16,7 +16,7 @@ SpaceScene.prototype.update = function() {
 
   // Shooting
   const spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
-  if (Phaser.Input.Keyboard.JustDown(spacebar)) {
+  if /*game.cursors.space.isDown*/(Phaser.Input.Keyboard.JustDown(spacebar)) {
     let texture = "";
     let x = 0;
     if (game.mode === "normal") {
