@@ -16,34 +16,39 @@ SpaceScene.prototype.update = function() {
 
   // Shooting
   const spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
-  if (Phaser.Input.Keyboard.JustDown(spacebar)) {
+  if /*game.cursors.space.isDown*/(Phaser.Input.Keyboard.JustDown(spacebar)) {
     let texture = "";
     let x = 0;
     if (game.mode === "normal") {
+      game.sfx.normalLaser.play();
       texture = "bullet";
       x = game.spaceship.x - 4;
     } else if (game.mode === "cannon") {
+      game.sfx.cannonLaser.play();
       texture = "cannonBullet";
       x = game.spaceship.x - 4;
     } else if (game.mode === "double") {
+      game.sfx.doubleLaser.play();
       texture = "bullet";
       x = game.spaceship.x - 35;
     } else {
+      game.sfx.doubleLaser.play();
+      game.sfx.cannonLaser.play();
       texture = "cannonBullet";
       x = game.spaceship.x - 4;
     }
     let bullet = game.spaceship.bullets.create(x, game.spaceship.y, texture).setScale(8);
     bullet.setGravityY(-config.physics.arcade.gravity.y);
-    this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
+    this.physics.velocityFromAngle(game.spaceship.angle - 90, 1000, bullet.body.velocity);
     if (game.mode === "double" || game.mode === "both") {
       let bullet = game.spaceship.bullets.create(game.spaceship.x + 30, game.spaceship.y, "bullet").setScale(8);
       bullet.setGravityY(-config.physics.arcade.gravity.y);
-      this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
+      this.physics.velocityFromAngle(game.spaceship.angle - 90, 1000, bullet.body.velocity);
     }
     if (game.mode === "both") {
       let bullet = game.spaceship.bullets.create(game.spaceship.x - 35, game.spaceship.y, "bullet").setScale(8);
       bullet.setGravityY(-config.physics.arcade.gravity.y);
-      this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
+      this.physics.velocityFromAngle(game.spaceship.angle - 90, 1000, bullet.body.velocity);
     }
   }
 
