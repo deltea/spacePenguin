@@ -5,7 +5,7 @@ game.space.addBullet = (phaser, x, y, type) => {
   phaser.physics.velocityFromAngle(game.space.spaceship.angle - 90, 1000, bullet.body.velocity);
   bullet.timeLimit = phaser.time.addEvent({
     // Time
-    delay: 600,
+    delay: 1000,
 
     // Callback
     callback: () => {
