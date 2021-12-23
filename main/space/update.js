@@ -39,16 +39,16 @@ SpaceScene.prototype.update = function() {
     }
     let bullet = game.spaceship.bullets.create(x, game.spaceship.y, texture).setScale(8);
     bullet.setGravityY(-config.physics.arcade.gravity.y);
-    this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
+    this.physics.velocityFromAngle(game.spaceship.angle - 90, 1000, bullet.body.velocity);
     if (game.mode === "double" || game.mode === "both") {
       let bullet = game.spaceship.bullets.create(game.spaceship.x + 30, game.spaceship.y, "bullet").setScale(8);
       bullet.setGravityY(-config.physics.arcade.gravity.y);
-      this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
+      this.physics.velocityFromAngle(game.spaceship.angle - 90, 1000, bullet.body.velocity);
     }
     if (game.mode === "both") {
       let bullet = game.spaceship.bullets.create(game.spaceship.x - 35, game.spaceship.y, "bullet").setScale(8);
       bullet.setGravityY(-config.physics.arcade.gravity.y);
-      this.physics.velocityFromAngle(game.spaceship.angle - 90, 500, bullet.body.velocity);
+      this.physics.velocityFromAngle(game.spaceship.angle - 90, 1000, bullet.body.velocity);
     }
   }
 
