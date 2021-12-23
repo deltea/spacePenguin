@@ -1,4 +1,4 @@
-// Janras
+// Space Penguin
 // Game obj
 let game = {
   sfx: {},

@@ -20,15 +20,20 @@ SpaceScene.prototype.update = function() {
     let texture = "";
     let x = 0;
     if (game.mode === "normal") {
+      game.sfx.normalLaser.play();
       texture = "bullet";
       x = game.spaceship.x - 4;
     } else if (game.mode === "cannon") {
+      game.sfx.cannonLaser.play();
       texture = "cannonBullet";
       x = game.spaceship.x - 4;
     } else if (game.mode === "double") {
+      game.sfx.doubleLaser.play();
       texture = "bullet";
       x = game.spaceship.x - 35;
     } else {
+      game.sfx.doubleLaser.play();
+      game.sfx.cannonLaser.play();
       texture = "cannonBullet";
       x = game.spaceship.x - 4;
     }
