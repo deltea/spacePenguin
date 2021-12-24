@@ -35,14 +35,14 @@ SpaceScene.prototype.create = function() {
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
     asteroid.setVelocityX(Math.random() * (800 - -800) + -800);
     asteroid.setVelocityY(Math.random() * (800 - -800) + -800);
-    asteroid.health = 3;
+    asteroid.health = 5;
   }
 
   // Colliders
   this.physics.add.collider(game.space.spaceship.bullets, game.space.asteroids, function(bullet, asteroid) {
     game.space.sfx.explosion.play();
     bullet.destroy();
-    asteroid.health--;
+    asteroid.health -= bullet.damage;
     if (asteroid.health < 1) {
       game.space.sfx.bigExplosion.play();
       asteroid.destroy();
