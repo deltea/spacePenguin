@@ -35,7 +35,7 @@ SpaceScene.prototype.create = function() {
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
     asteroid.setVelocityX(Math.random() * (800 - -800) + -800);
     asteroid.setVelocityY(Math.random() * (800 - -800) + -800);
-    asteroid.health = 3;
+    asteroid.health = 5;
   }
 
   // Colliders
