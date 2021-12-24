@@ -42,7 +42,7 @@ SpaceScene.prototype.create = function() {
   this.physics.add.collider(game.space.spaceship.bullets, game.space.asteroids, function(bullet, asteroid) {
     game.space.sfx.explosion.play();
     bullet.destroy();
-    asteroid.health--;
+    asteroid.health -= bullet.damage;
     if (asteroid.health < 1) {
       game.space.sfx.bigExplosion.play();
       asteroid.destroy();

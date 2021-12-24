@@ -39,10 +39,10 @@ SpaceScene.prototype.update = function() {
     }
     game.space.addBullet(this, x, game.space.spaceship.y, texture);
     if (game.space.mode === "double" || game.space.mode === "both") {
-      game.space.addBullet(this, game.space.spaceship.x + 30, game.spaceship.y, "bullet");
+      game.space.addBullet(this, game.space.spaceship.x + 30, game.space.spaceship.y, "bullet");
     }
     if (game.space.mode === "both") {
-      game.space.addBullet(this, game.space.spaceship.x - 35, game.spaceship.y, "bullet");
+      game.space.addBullet(this, game.space.spaceship.x - 35, game.space.spaceship.y, "bullet");
     }
   }
 
