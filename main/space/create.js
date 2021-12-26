@@ -20,9 +20,13 @@ SpaceScene.prototype.create = function() {
   });
 
   // Background space tiles
+  // WARNING: Always be put first
   for (var i = 0; i < 1000; i++) {
     this.add.image(Math.random() * game.width, Math.random() * game.height, "spaceTile").setScale(8);
   }
+
+  // Pencoin
+  game.space.pencoin = this.physics.add.staticGroup();
 
   // Spaceship
   game.space.spaceship = this.physics.add.sprite(game.width / 2, game.height / 2, "spaceshipNormal").setGravityY(-config.physics.arcade.gravity.y).setScale(8).setDrag(30);
