@@ -31,6 +31,7 @@ SpaceScene.prototype.create = function() {
   game.space.asteroids = this.physics.add.group();
   for (var i = 0; i < 100; i++) {
     let asteroid = game.space.asteroids.create(Math.random() * game.width, Math.random() * game.height, "asteroid");
+    asteroid.body.angularVelocity = Math.random() * 500;
     asteroid.setScale(8);
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
     asteroid.setVelocityX(Math.random() * (800 - -800) + -800);
