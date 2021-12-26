@@ -11,6 +11,13 @@ SpaceScene.prototype.create = function() {
   game.space.sfx.hurt = this.sound.add("hurt");
   game.space.sfx.teleport = this.sound.add("teleport");
   game.space.sfx.bigExplosion = this.sound.add("bigExplosion");
+  game.space.sfx.music = this.sound.add("music");
+
+  // Play music
+  game.space.sfx.music.setLoop(true);
+  game.space.sfx.music.play({
+    volume: 1.5
+  });
 
   // Background space tiles
   for (var i = 0; i < 1000; i++) {

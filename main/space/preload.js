@@ -18,4 +18,5 @@ SpaceScene.prototype.preload = function() {
   this.load.audio("hurt", "main/space/assets/sfx/hurt.wav");
   this.load.audio("teleport", "main/space/assets/sfx/teleport.wav");
   this.load.audio("bigExplosion", "main/space/assets/sfx/bigExplosion.wav");
+  this.load.audio("music", "main/space/assets/sfx/music.mp3");
 };
