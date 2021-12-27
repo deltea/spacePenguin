@@ -63,4 +63,7 @@ SpaceScene.prototype.create = function() {
   });
   this.physics.add.collider(game.space.spaceship, game.space.asteroids);
   this.physics.add.collider(game.space.asteroids, game.space.asteroids);
+  this.physics.add.collider(game.space.spaceship, game.space.pencoin, function(ship, coin) {
+    coin.destroy();
+  });
 };
