@@ -12,6 +12,7 @@ SpaceScene.prototype.create = function() {
   game.space.sfx.teleport = this.sound.add("teleport");
   game.space.sfx.bigExplosion = this.sound.add("bigExplosion");
   game.space.sfx.music = this.sound.add("music");
+  game.space.sfx.pencoin = this.sound.add("pencoin");
 
   // Play music
   game.space.sfx.music.setLoop(true);
@@ -64,6 +65,7 @@ SpaceScene.prototype.create = function() {
   this.physics.add.collider(game.space.spaceship, game.space.asteroids);
   this.physics.add.collider(game.space.asteroids, game.space.asteroids);
   this.physics.add.collider(game.space.spaceship, game.space.pencoin, function(ship, coin) {
+    game.space.sfx.pencoin.play();
     coin.destroy();
   });
 };
