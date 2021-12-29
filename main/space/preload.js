@@ -9,6 +9,8 @@ SpaceScene.prototype.preload = function() {
   this.load.image("cannonBullet", "main/space/assets/cannonBullet.png");
   this.load.image("asteroid", "main/space/assets/asteroid.png");
   this.load.image("spaceTile", "main/space/assets/spaceTile.png");
+  this.load.image("coin0", "main/space/assets/coin0.png");
+  this.load.image("coi1n", "main/space/assets/coin1.png");
 
   // Load sounds
   this.load.audio("normalLaser", "main/space/assets/sfx/normalLaser.wav");
@@ -18,4 +20,6 @@ SpaceScene.prototype.preload = function() {
   this.load.audio("hurt", "main/space/assets/sfx/hurt.wav");
   this.load.audio("teleport", "main/space/assets/sfx/teleport.wav");
   this.load.audio("bigExplosion", "main/space/assets/sfx/bigExplosion.wav");
+  this.load.audio("music", "main/space/assets/sfx/music.mp3");
+  this.load.audio("pencoin", "main/space/assets/sfx/pencoin.wav");
 };

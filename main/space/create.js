@@ -11,11 +11,23 @@ SpaceScene.prototype.create = function() {
   game.space.sfx.hurt = this.sound.add("hurt");
   game.space.sfx.teleport = this.sound.add("teleport");
   game.space.sfx.bigExplosion = this.sound.add("bigExplosion");
+  game.space.sfx.music = this.sound.add("music");
+  game.space.sfx.pencoin = this.sound.add("pencoin");
+
+  // Play music
+  game.space.sfx.music.setLoop(true);
+  game.space.sfx.music.play({
+    volume: 1.5
+  });
 
   // Background space tiles
+  // WARNING: Always be put first
   for (var i = 0; i < 1000; i++) {
     this.add.image(Math.random() * game.width, Math.random() * game.height, "spaceTile").setScale(8);
   }
+
+  // Pencoin
+  game.space.pencoin = this.physics.add.staticGroup();
 
   // Spaceship
   game.space.spaceship = this.physics.add.sprite(game.width / 2, game.height / 2, "spaceshipNormal").setGravityY(-config.physics.arcade.gravity.y).setScale(8).setDrag(30);
@@ -31,23 +43,30 @@ SpaceScene.prototype.create = function() {
   game.space.asteroids = this.physics.add.group();
   for (var i = 0; i < 100; i++) {
     let asteroid = game.space.asteroids.create(Math.random() * game.width, Math.random() * game.height, "asteroid");
+    asteroid.body.angularVelocity = Math.random() * 500;
     asteroid.setScale(8);
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
     asteroid.setVelocityX(Math.random() * (800 - -800) + -800);
     asteroid.setVelocityY(Math.random() * (800 - -800) + -800);
-    asteroid.health = 3;
+    asteroid.health = 5;
   }
 
   // Colliders
   this.physics.add.collider(game.space.spaceship.bullets, game.space.asteroids, function(bullet, asteroid) {
     game.space.sfx.explosion.play();
     bullet.destroy();
-    asteroid.health--;
+    asteroid.health -= bullet.damage;
     if (asteroid.health < 1) {
       game.space.sfx.bigExplosion.play();
       asteroid.destroy();
+      game.space.addPencoin(this, asteroid);
     }
   });
   this.physics.add.collider(game.space.spaceship, game.space.asteroids);
   this.physics.add.collider(game.space.asteroids, game.space.asteroids);
+  this.physics.add.collider(game.space.spaceship, game.space.pencoin, function(ship, coin) {
+    game.space.sfx.pencoin.play();
+    coin.destroy();
+    game.pencoin++;
+  });
 };
