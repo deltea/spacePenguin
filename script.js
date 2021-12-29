@@ -3,6 +3,9 @@
 let game = {
   width: 20000,
   height: 10000,
+  stats: {
+    pencoin: 0
+  },
   space: {
     sfx: {},
     stats: {},

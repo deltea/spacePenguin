@@ -67,5 +67,6 @@ SpaceScene.prototype.create = function() {
   this.physics.add.collider(game.space.spaceship, game.space.pencoin, function(ship, coin) {
     game.space.sfx.pencoin.play();
     coin.destroy();
+    game.pencoin++;
   });
 };
