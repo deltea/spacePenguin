@@ -60,7 +60,9 @@ SpaceScene.prototype.create = function() {
     if (asteroid.health < 1) {
       game.space.sfx.bigExplosion.play();
       asteroid.destroy();
-      game.space.addPencoin(this, asteroid);
+      if (Math.floor(Math.random() * 2) === 1) {
+        game.space.addPencoin(this, asteroid);
+      }
     }
   });
   this.physics.add.collider(game.space.spaceship, game.space.asteroids);
