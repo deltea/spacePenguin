@@ -10,7 +10,11 @@ SpaceScene.prototype.preload = function() {
   this.load.image("asteroid", "main/space/assets/asteroid.png");
   this.load.image("spaceTile", "main/space/assets/spaceTile.png");
   this.load.image("coin0", "main/space/assets/coin0.png");
-  this.load.image("coi1n", "main/space/assets/coin1.png");
+  this.load.image("coin1", "main/space/assets/coin1.png");
+  this.load.image("explosion0", "main/space/assets/explosion0.png");
+  this.load.image("explosion1", "main/space/assets/explosion1.png");
+  this.load.image("explosion2", "main/space/assets/explosion2.png");
+  this.load.image("explosion3", "main/space/assets/explosion3.png");
 
   // Load sounds
   this.load.audio("normalLaser", "main/space/assets/sfx/normalLaser.wav");
