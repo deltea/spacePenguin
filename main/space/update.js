@@ -60,4 +60,9 @@ SpaceScene.prototype.update = function() {
   } else {
     game.space.spaceship.setTexture("spaceshipBoth");
   }
+
+  // Pencoin
+  game.space.pencoin.getChildren().forEach(coin => {
+    coin.anims.play("coinSpin", true);
+  });
 };
