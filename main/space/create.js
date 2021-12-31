@@ -72,4 +72,17 @@ SpaceScene.prototype.create = function() {
     coin.destroy();
     game.pencoin++;
   });
+
+  // Animation
+  this.anims.create({
+    key: "coinSpin",
+    frames: [{
+      key: "coin0"
+    },
+    {
+      key: "coin1"
+    }],
+    frameRate: 5,
+    repeat: -1
+  });
 };
