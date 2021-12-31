@@ -44,6 +44,7 @@ SpaceScene.prototype.create = function() {
   for (var i = 0; i < 100; i++) {
     let asteroid = game.space.asteroids.create(Math.random() * game.width, Math.random() * game.height, "asteroid");
     asteroid.body.angularVelocity = Math.random() * 500;
+    asteroid.setCircle(12);
     asteroid.setScale(8);
     asteroid.setGravityY(-config.physics.arcade.gravity.y);
     asteroid.setVelocityX(Math.random() * (800 - -800) + -800);
@@ -64,7 +65,7 @@ SpaceScene.prototype.create = function() {
   });
   this.physics.add.collider(game.space.spaceship, game.space.asteroids);
   this.physics.add.collider(game.space.asteroids, game.space.asteroids);
-  this.physics.add.collider(game.space.spaceship, game.space.pencoin, function(ship, coin) {
+  this.physics.add.overlap(game.space.spaceship, game.space.pencoin, function(ship, coin) {
     game.space.sfx.pencoin.play();
     coin.destroy();
     game.pencoin++;
