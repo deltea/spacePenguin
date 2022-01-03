@@ -1,4 +1,5 @@
 // Preload for Planets
 PlanetScene.prototype.preload = function() {
-
+  // Load images
+  this.load.image("penguin", "main/planet/asset/penguin.png");
 };
